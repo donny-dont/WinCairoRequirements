@@ -16,6 +16,7 @@ vcpkg_apply_patches(
     PATCHES
         ${CMAKE_CURRENT_LIST_DIR}/patches/0001-Remove-postfix-from-archive-name.patch
         ${CMAKE_CURRENT_LIST_DIR}/patches/0002-Disable-additional-warnings-for-Visual-Studio.patch
+        ${CMAKE_CURRENT_LIST_DIR}/patches/0003-Remove-WinCrypt-warning.patch
 )
 
 # Run CMake build

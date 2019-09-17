@@ -1,0 +1,54 @@
+diff --git a/include/openssl/ossl_typ.h b/include/openssl/ossl_typ.h
+index b1a9e0e..4173775 100644
+--- a/include/openssl/ossl_typ.h
++++ b/include/openssl/ossl_typ.h
+@@ -81,13 +81,6 @@ typedef struct ASN1_ITEM_st ASN1_ITEM;
+ typedef struct asn1_pctx_st ASN1_PCTX;
+ 
+ #if defined(_WIN32) && defined(__WINCRYPT_H__)
+-#ifndef LIBRESSL_INTERNAL
+-#ifdef _MSC_VER
+-#pragma message("Warning, overriding WinCrypt defines")
+-#else
+-#warning overriding WinCrypt defines
+-#endif
+-#endif
+ #undef X509_NAME
+ #undef X509_CERT_PAIR
+ #undef X509_EXTENSIONS
+diff --git a/include/openssl/pkcs7.h b/include/openssl/pkcs7.h
+index cff7c96..9d6c5ed 100644
+--- a/include/openssl/pkcs7.h
++++ b/include/openssl/pkcs7.h
+@@ -70,13 +70,6 @@ extern "C" {
+ #endif
+ 
+ #if defined(_WIN32) && defined(__WINCRYPT_H__)
+-#ifndef LIBRESSL_INTERNAL
+-#ifdef _MSC_VER
+-#pragma message("Warning, overriding WinCrypt defines")
+-#else
+-#warning overriding WinCrypt defines
+-#endif
+-#endif
+ #undef PKCS7_ISSUER_AND_SERIAL
+ #undef PKCS7_SIGNER_INFO
+ #endif
+diff --git a/include/openssl/x509.h b/include/openssl/x509.h
+index e30cbc0..548be39 100644
+--- a/include/openssl/x509.h
++++ b/include/openssl/x509.h
+@@ -113,13 +113,6 @@ extern "C" {
+ #endif
+ 
+ #if defined(_WIN32) && defined(__WINCRYPT_H__)
+-#ifndef LIBRESSL_INTERNAL
+-#ifdef _MSC_VER
+-#pragma message("Warning, overriding WinCrypt defines")
+-#else
+-#warning overriding WinCrypt defines
+-#endif
+-#endif
+ #undef X509_NAME
+ #undef X509_CERT_PAIR
+ #undef X509_EXTENSIONS
