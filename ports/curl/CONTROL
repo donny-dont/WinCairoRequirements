@@ -2,6 +2,7 @@ Source: curl
 Version: 7.75.0
 Build-Depends: zlib, brotli, nghttp2
 Description: A library for transferring data with URLs
+Default-Features: ares, ipv6, ssl
 
 Feature: ares
 Build-Depends: c-ares
